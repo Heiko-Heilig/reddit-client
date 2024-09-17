@@ -1,0 +1,111 @@
+/* Style for the form and its elements */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Add spacing between the input and checkbox */
+  }
+  
+  .search-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 400px; /* Control the max width of the search bar */
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Flexbox container for the toggle */
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .toggle-label input[type="checkbox"] {
+    margin-left: 10px; /* Small gap between label and checkbox */
+  }
+  
+  /* Rest of your CSS remains the same */
+  .search-page {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  .warning {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .search-results .post {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-results .post h2 {
+    font-size: 1.5rem;
+  }
+  
+  .search-results .post-content {
+    margin: 15px 0;
+  }
+  
+  .post-media {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .search-results .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 20px;
+  }
+  

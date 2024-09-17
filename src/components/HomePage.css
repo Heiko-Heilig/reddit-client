@@ -8,8 +8,36 @@
   
   h1 {
     text-align: center;
+    margin-bottom: 20px;
   }
   
+  /* Styling for filter buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .filter-buttons button.active {
+    background-color: #005fa3;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Post container */
   .post {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -20,17 +48,10 @@
     max-height: 450px; /* Default height for collapsed post */
     overflow: hidden;
     transition: max-height 0.5s ease; /* Smooth transition for expanding/collapsing */
-    text-align: center;
   }
   
   .post.expanded {
     max-height: 1000px; /* Larger height for expanded post */
-  }
-  
-  .post-header {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-align: center;
   }
   
   .post-header h2 {
@@ -39,20 +60,8 @@
     color: #333;
   }
   
-  .post-header a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from h2 */
-  }
-  
-  .post-header a:hover {
-    color: #0077cc; /* Optional hover color */
-  }
-  
   .post-content {
     margin: 15px 0;
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
   }
   
   .post-media {
@@ -62,26 +71,20 @@
     margin-top: 10px;
     object-fit: cover;
     transition: max-height 0.5s ease, width 0.5s ease; /* Smooth transition for media size */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
   }
   
   .post-media.expanded {
-    max-height: 60vh; /* Expanded height for media */
+    max-height: 60vh; /* Expanded media size */
     width: auto; /* Maintain aspect ratio */
   }
   
   .post-footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
   }
   
   .post-footer span {
-    margin-right: 15px;
     color: #555;
   }
   
@@ -93,5 +96,49 @@
   
   .post-footer a:hover {
     color: #005fa3;
+  }
+
+  /* General link styling - Remove underline for all links */
+a, .post-header a {
+    text-decoration: none;
+    color: inherit; /* Ensure the link inherits color from the surrounding text */
+  }
+  
+  a:hover, .post-header a:hover {
+    color: #0077cc; /* Optional hover color */
+  }
+  
+
+  /* Navigation styles */
+.navigation {
+    text-align: center; /* Center the navigation */
+    margin: 20px 0; /* Add some spacing around the nav */
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    display: inline-block; 
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin: 0 20px; /* Add space between the links */
+  }
+  
+  .nav-links a {
+    text-decoration: none; /* Remove the underline */
+    color: #0077cc; /* Default link color */
+    font-size: 1.2rem; /* Increase font size for better visibility */
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #005fa3; /* Darker hover color */
+    text-decoration: underline; /* Optional hover underline */
+  }
+  
+  .nav-links a.active {
+    color: #005fa3; /* Active link color */
   }
   
